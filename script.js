@@ -74,24 +74,25 @@ counters.forEach(function (counter) {
     { threshold: [0.1] }
   );
 
-  observer.observe(counter)});    
+  observer.observe(counter)
+});
 
-  const toggelButton = document.querySelector('button');
+const toggelButton = document.querySelector('button');
 
-toggelButton.addEventListener("click",()=>{
+toggelButton.addEventListener("click", () => {
 
   document.querySelector('.navigation__icon').classList.toggle('active');
 
   const nav = document.querySelector('nav');
-  if(toggelButton.getAttribute('aria-expanded') == "false"){
+  if (toggelButton.getAttribute('aria-expanded') == "false") {
     const nav = document.querySelector('nav');
-    if(!nav.classList.contains('sticky')){
+    if (!nav.classList.contains('sticky')) {
       nav.style.backgroundColor = "rgba(0,0,0,1)";
     }
   }
-  else if(!nav.classList.contains('sticky')){
+  else if (!nav.classList.contains('sticky')) {
     nav.style.backgroundColor = "transparent";
 
   }
-  
+
 });
