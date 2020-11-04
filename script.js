@@ -3,8 +3,10 @@ $(document).ready(function () {
   $(".section-about").waypoint(
     function (direction) {
       if (direction == "down") {
+        $("nav").removeClass("hidden");
         $("nav").addClass("sticky");
       } else {
+        $("nav").addClass("hidden");
         $("nav").removeClass("sticky");
       }
     },
@@ -94,5 +96,16 @@ toggelButton.addEventListener("click", () => {
     nav.style.backgroundColor = "transparent";
 
   }
+<<<<<<< HEAD
 
 });
+=======
+  
+});
+
+const tl = gsap.timeline({defaults:{ease:"power1.out"}});
+tl.to('.hero-text-box',{opacity:1, duration:0.4});
+tl.fromTo('.logo',{scale:0},{scale:1.2, duration:1});
+tl.fromTo('.heading',{opacity:0},{opacity:1, duration:2});
+tl.fromTo('.fa-chevron-down',{opacity:0},{opacity:1, duration:1},"-=1");
+>>>>>>> 5d42d0b5e1ea0ee2b0beef6e05a0942d7110aa75
